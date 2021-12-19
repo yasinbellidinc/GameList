@@ -15,5 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [GameListController::class, 'index'])->name('index');
-
-
+Route::get('/brackets', [GameListController::class, 'brackets'])->name('brackets');
+Route::get('/bracketControlForm', [GameListController::class, 'bracketControlForm'])->name('bracketControlForm');
