@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GameListController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,11 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [GameListController::class, 'index'])->name('index');
 
 
-Route::get('/test', function () {
-    return view('test');
-});
