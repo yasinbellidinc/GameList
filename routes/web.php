@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GameListController;
+use App\Http\Controllers\BracketController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,5 +16,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [GameListController::class, 'index'])->name('index');
-Route::get('/brackets', [GameListController::class, 'brackets'])->name('brackets');
-Route::get('/bracketControlForm', [GameListController::class, 'bracketControlForm'])->name('bracketControlForm');
+Route::get('/brackets', [BracketController::class, 'brackets'])->name('brackets');
+Route::get('/bracketControlForm', [BracketController::class, 'bracketControlForm'])->name('bracketControlForm');
